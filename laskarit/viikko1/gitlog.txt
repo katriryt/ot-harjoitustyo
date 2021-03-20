@@ -1,0 +1,123 @@
+Git alkeet: Harjoittelua
+
+Tehtävä
+* Suorita komento git log --stat | cat ja ota tulos talteen # DONE 
+* git log alla
+
+#####################################################################################3
+
+commit deba053daf045bf3a7df4d7b79efaaf717c33602
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 16:38:59 2021 +0200
+
+    harjoittelua poistojen ja nimeämisen osalta
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d2c4a6bdb41105382b145e3e4046a894c061a436
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 16:32:18 2021 +0200
+
+    folder ja useita uusia tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7de482ec265575845e5f6f6d7446aff584f1ee62
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 16:21:20 2021 +0200
+
+    tehtiin patch-hyväksynnät muutoksille git add -p
+
+ eka.txt    | 9 ++++-----
+ kolmas.txt | 6 +++++-
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+commit d971a383a983a48cded246ccc0c3105a52a9b20a
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 16:01:53 2021 +0200
+
+    vaihdettiin tiedoston nimi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c31b067f5d2dd143dd55ca4fe8e7ff0c13228349
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:58:42 2021 +0200
+
+    poistettiin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 22654f6c12081c5ad8ccd43f9f2c38b6c4966cd6
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:55:50 2021 +0200
+
+    lisää editointeja
+
+ tiedosto.txt | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+commit 55454a9b3f147aea73bc5a243148a9dd3f253c12
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:54:41 2021 +0200
+
+    paljon tekstiä
+
+ tiedosto.txt | 147 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 146 insertions(+), 1 deletion(-)
+
+commit 0c77c90bbabd825e9de8fc7bcb1d99c8ff46833a
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:46:20 2021 +0200
+
+    uusi folder sisältöineen
+
+ stuff/jokin_tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b3aca3aaa083cc0e47cded5fa9bb597619e50a2b
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:44:35 2021 +0200
+
+    lisää harjoittelua commit
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit a29c479c03ddb2afcddac82b8141feec6e097229
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:42:34 2021 +0200
+
+    kolmas tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c173f2003b0af918306daa164b41a1c444fae1ad
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:38:39 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit ebe0c4dca3519984fcb843370e4d90b83ca24fa9
+Author: Katri <katri.rytkonen@outlook.com>
+Date:   Sat Mar 20 15:33:43 2021 +0200
+
+    tiedosto luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+#####################################################################################3
