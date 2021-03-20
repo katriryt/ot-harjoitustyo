@@ -4,6 +4,7 @@ Tehtävä
 * Suorita komento git log --stat | cat ja ota tulos talteen # DONE 
 * git log alla
 
+* Editointi konfliktia varten
 #####################################################################################3
 
 commit deba053daf045bf3a7df4d7b79efaaf717c33602
