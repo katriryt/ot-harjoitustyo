@@ -16,9 +16,11 @@ Päivitetty 21.3.2021
 [Alustava_määrittelydokumentti](/projekti/dokumentaatio/game_design_doc.md)
 
 **Harjoitus 2: Maksukortti- ja Unicafe-tehtävien tiedostot**
+
 [Testikattavuus-raportti_Unicafe-tehtävästä](/laskarit/viikko2/unicafe_test_coverage_report.png)
 
 **Yleistä**
+
 [Työaikakirjanpito](tyoaikakirjanpito.pdf)
 
 Päivitetty 28.3.2021
