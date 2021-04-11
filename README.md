@@ -1,26 +1,57 @@
-# Ohjelmistotekniikka: Viikoittaiset palautukset
+# Katakana no Geemu - Sudden Death
 
-Alla ovat linkit valittuihin Ohjelmistotekniikka-kurssin kevään 2021 viikoittaisiin palautuksiin. Kaikki materiaali löytyy viikoittaisista kansioista. 
+Purpose of the **Katakana no Geemu - Sudden Death** is to learn to read Japanese katakana symbols quickly in a fun and interactive way. 
 
-## Viikko 1
-Linkit tiedostoihin: 
-[gitlog.txt](/laskarit/viikko1/gitlog.txt) ja 
-[komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
+Katakana is one of the three Japanese syllabary, along with hiragana and kanji (and in some cases the Latin script (known as roomaji)). 
 
-Päivitetty 21.3.2021
+The game is a modified version of a basic memory game (find the pairs game). The player needs to pick two cards with the same symbol from a set of turned over cards. There are a few "Sudden death" cards included in the set of cards, which cause the player to lose lives. There is also a timer, so the puzzle needs to be solved within a time limit. As levels become more difficult, time is reduced, number of cards and "Sudden death" cards is increased.
 
-## Viikko 2
-
-**Harjoitus 1: Harjoitustyö, ensimmäinen palautus**
+## Documentation
 
 [Alustava_määrittelydokumentti](/projekti/dokumentaatio/game_design_doc.md)
 
-**Harjoitus 2: Maksukortti- ja Unicafe-tehtävien tiedostot**
+## Installation
 
-[Testikattavuus-raportti_Unicafe-tehtävästä](/laskarit/viikko2/unicafe_test_coverage_report.png)
+Install dependencies with the following command:
 
-**Yleistä**
+```bash
+poetry install
+```
 
-[Työaikakirjanpito](tyoaikakirjanpito.pdf)
+Start the application with the following command: 
 
-Päivitetty 28.3.2021
+```bash
+poetry run invoke start
+```
+
+## Commands on the command line
+
+Please see the relevant commands below.
+
+### Running the application
+
+The application can be started with the following command:
+
+```bash
+poetry run invoke start
+```
+
+### Testing
+
+Tests can be run with the following command: 
+
+```bash
+poetry run invoke test
+```
+
+### Test coverage
+
+An HTML-format test coverage report can be generated with the following command:
+
+```bash
+poetry run invoke coverage-report
+```
+
+The report is generated in the _htmlcov_ folder.
+
+Updated 11.4.2021
