@@ -25,19 +25,19 @@ Each of the views is implemented as their own class. Only one of the views is vi
 
 [UI](../src/ui/ui.py) class is responsible for showing each of the view. UI class also includes  the common functionalities for all the views (e.g. common buttons for moving between different views). Each of the views is drawn on a dedicated frame within the overall UI. 
 
-User interface is intended to be separate from the game logic. UI related classes call on methods from the [PlayGame](../src/services/play_game.py) class, which will class the other classes (work in progress).
+User interface is intended to be separate from the game logic. UI related classes call on methods from the [PlayGame](../src/services/playgame.py) class, which will class the other classes (work in progress).
 
 ## Game Logic
 
 Game logic is work in progress. 
 
-At the moment, the core game logic had been developed in [PlayGame](../src/services/play_game.py) class. Class offers core functoinalities to play the memory game, such as
+At the moment, the core game logic had been developed in [PlayGame](../src/services/playgame.py) class. Class offers core functoinalities to play the memory game, such as
 - '_set_up_game_board(self)'
 - '_generate_game_list(self, wanted_pairs, wanted_sudden_deaths)'
 - '_card_pressed(self, input_button_number)'
 - '_game_over(self, message)'
 
-Regarding the core ways to use Player's individual data, [Player](../src/entities/play_game.py) class sets up a new user and provides services to keep track of the player's key characteristics (e.g. name, points, team). Class is yet to be linked with the other classes. 
+Regarding the core ways to use Player's individual data, [Player](../src/entities/player.py) class sets up a new user and provides services to keep track of the player's key characteristics (e.g. name, points, team). Class is yet to be linked with the other classes. 
 
 The full game logic, which starts from the _PlayGame_ class is descibed below (based on current level of implementation): 
 
