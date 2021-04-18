@@ -23,7 +23,7 @@ class OpeningView():
         )
 
         image1 = Image.open(
-            "C:\MyFolder\School\TKT20002 Ohjelmistotekniikka\Vko3\peli_kuvia\explosion2.png")
+            ".\data\explosion2.png")
         image1 = image1.resize((400, 200), Image.ANTIALIAS)
         test = ImageTk.PhotoImage(image1)
         label1 = Label(
