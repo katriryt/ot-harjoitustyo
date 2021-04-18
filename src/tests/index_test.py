@@ -1,9 +1,9 @@
-import unittest 
-from index import Player 
+import unittest
+from index import Player
 
-class TestPlayer(unittest.TestCase): 
+class TestPlayer(unittest.TestCase):
 
-    def setUp(self): 
+    def setUp(self):
         self.player = Player("James")
 
     def test_constructor_sets_name_right(self):
@@ -11,7 +11,7 @@ class TestPlayer(unittest.TestCase):
         answer = str(self.player)
         self.assertEqual(answer, "Player name is James")
 
-    def test_points_are_added_right(self): 
+    def test_points_are_added_right(self):
 #        self.player = Player("James")
         self.player._add_points(10)
         answer = self.player._show_points()

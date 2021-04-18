@@ -1,15 +1,19 @@
-from invoke import task 
+from invoke import task
 
-@task 
-def start(ctx): 
+@task
+def start(ctx):
     ctx.run("python src/index.py")
 
 @task
-def test(ctx): 
+def test(ctx):
     ctx.run("pytest src")
 
 @task
-def coverage_report(ctx): 
+def coverage_report(ctx):
     ctx.run("coverage run --branch -m pytest src")
     ctx.run("coverage report -m")
     ctx.run("coverage html")
+
+@task
+def lint(ctx):
+    ctx.run("pylint src")

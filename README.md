@@ -8,7 +8,9 @@ The game is a modified version of a basic memory game (find the pairs game). The
 
 ## Documentation
 
-[Alustava_määrittelydokumentti](/projekti/dokumentaatio/game_design_doc.md)
+- [PreliminaryGameDesignDocument](/documentation/game_design_doc.md)
+- [PreliminaryArchitureDescription](/documentation/architecture.md)
+- [TimeSheet](/documentation/tyoaikakirjanpito.pdf)
 
 ## Installation
 
@@ -54,4 +56,11 @@ poetry run invoke coverage-report
 
 The report is generated in the _htmlcov_ folder.
 
-Updated 11.4.2021
+### Pylint
+
+Checks as defined by .pylintrc can be implemented with the following command: 
+```bash
+poetry run invoke lint
+```
+
+Updated 18.4.2021

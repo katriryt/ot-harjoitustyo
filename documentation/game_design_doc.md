@@ -16,7 +16,7 @@ There is only one type of role in the application, normal user, i.e. a player.
 
 To begin with, the game has six different screens. 
 
-![Game design document picture](game_design_doc_pic.jpg)
+![Game design document picture](/pictures/game_design_doc_pic.jpg)
 
 To allow moving between screen, the same menu is shown at the bottom of every screen.
 
