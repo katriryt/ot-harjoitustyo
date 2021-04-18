@@ -63,4 +63,12 @@ Checks as defined by .pylintrc can be implemented with the following command:
 poetry run invoke lint
 ```
 
+### autopep8 formatting
+
+Formats code according to pep8 standard: 
+```bash
+poetry run invoke format
+```
+
+
 Updated 18.4.2021
