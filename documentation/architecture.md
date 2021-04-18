@@ -4,7 +4,7 @@
 
 Application has three layers: presentation tier (UI), logic tier (services, entities), and data tier (storage of data). Code is packaged as follows: 
 
-![Package structure](/pictures/architecture_package.png)
+![Package structure](./pictures/architecture_package.png)
 
 _ui_, _services_, _entities_, and _repositories_ packages include the code for the user interface, game logic, classes using data structures (e.g. player functionalities), and long-term storage of data, respectively.
 
@@ -41,7 +41,7 @@ Regarding the core ways to use Player's individual data, [Player](../src/entitie
 
 The full game logic, which starts from the _PlayGame_ class is descibed below (based on current level of implementation): 
 
-![Package structure and classes](/pictures/architecture_package_classes.png)
+![Package structure and classes](./pictures/architecture_package_classes.png)
 
 ## Long Term Storage of Data
 
