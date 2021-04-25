@@ -1,5 +1,6 @@
 #from tkinter import *
 from tkinter import Label
+import os
 from PIL import Image, ImageTk
 
 
@@ -22,8 +23,18 @@ class OpeningView():
             text="Katakana no geemu - welcome",
         )
 
-        image1 = Image.open(
-            ".\data\explosion2.png")
+
+#        image1 = Image.open(
+#            ".\data\explosion2.png") # alkuperäinen, ei toimi
+
+        text = os.path.join(".", "data", "explosion2.png")
+#        print(text)
+        image1 = Image.open(text)  # ehdotettu korjaus ei toimi
+
+        # MUISTA KORJATA TÄMÄ!
+#        image1 = Image.open("C:\MyFolder\School\TKT20002 Ohjelmistotekniikka\Vko5\ot-harjoitustyo-copy\data\explosion2.png")
+        # works:
+#        image1 = Image.open("../data/explosion2.png")
         image1 = image1.resize((400, 200), Image.ANTIALIAS)
         test = ImageTk.PhotoImage(image1)
         label1 = Label(

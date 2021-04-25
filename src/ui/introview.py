@@ -13,7 +13,7 @@ class IntroView():
 
     def _initialize(self):
 
-        self._root.configure(bg="lightblue")
+        self._root.configure(bg="cyan")
 
         all_text = ["Welcome to the Katakana no geemu!",
                     "",

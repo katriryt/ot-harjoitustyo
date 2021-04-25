@@ -27,7 +27,7 @@ Implementation status for the functionalities in paranthesis. Alternatives for t
 ### High level functionalities by screen (implementation status in paranthesis)
 * Screen 1 shows the name of the game and allows to go to introduction/options screen, start the game with default functionalities or exit. (first draft DONE, visual improvements in BACKLOG)
 * Screen 2 outlines the purpose of the game and the instructions for playing. (first draft DONE, visual improvements in BACKLOG)
-* In screen 3, the player can input their name, select their team and choose the level of the game (to begin with, only Level 0 (training mode) or Level 1 (easiest level)). (baseline DONE, other functionalities in BACKLOG)
+* In screen 3, the player can input their name, select their team and choose the level of the game (to begin with, only Level 0 (training mode) or Level 1 (easiest level)). (baseline DONE, player can input their name (also supporting database functionalities) DONE, other functionalities in BACKLOG)
 * In screen 4, a game board is set. The living members of the team are shows as well as the statistics for the game. (baseline and core functionalities DONE, other functionalities in BACKLOG)
 * If the level is cleared (all identical pairs of katakana cards are identified within time limit, "Sudden death" cards may be left of the table unopened), game moves to screen 5, allowing e.g. advancement to new levels or replaying of the same level. (BACKLOG)
 * If level is not cleared (cards are not identified within the time limit or the entire team is eliminated in the attempt), game moves to screen 6, allowing starting from level 0 and 1. (BACKLOG)
@@ -39,7 +39,7 @@ User can...
 * Read the instructions for the game (first draft DONE)
 * Choose their team members (BACKLOG)
 * Choose the difficulty level of the game (0 or 1 to begin with) (BACKLOG)
-* Set a name for themselves (BACKLOG)
+* Set a name for themselves (DONE)
 * Turn around two cards at the same time by selecting the card with a press of a mouse (DONE)
 
 The game will...

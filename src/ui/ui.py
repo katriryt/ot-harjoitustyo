@@ -14,7 +14,9 @@ class UI:
         # Sets window as the main object and current view as None.
         self._root = root
         self._root_width = input_width
+#        print(self._root_width)
         self._root_height = input_height
+#        print(self._root_height)
         self._bottom_height = 50
 
         self._current_view = None
@@ -38,8 +40,8 @@ class UI:
             height=self._bottom_height,
         )
 
-        self._root.grid_rowconfigure(2)
-        self._root.grid_columnconfigure(1)
+#        self._root.grid_rowconfigure(2)
+#        self._root.grid_columnconfigure(1)
 
         center_frame.grid(
             row=0,
@@ -88,33 +90,102 @@ class UI:
         self._show_opening_view(center_frame)
 
     def _show_opening_view(self, screen):
-        for widget in screen.winfo_children():
-            widget.destroy()
+        #        for widget in screen.winfo_children():
+        #            widget.destroy()
+
+        new_center_frame = Frame(
+            screen,
+            bg="cyan",
+            width=self._root_width,
+            heigh=self._root_height - self._bottom_height,
+        )
+
+        new_center_frame.grid(
+            row=0,
+            column=0,
+            sticky="nsew"
+        )
+
         self._current_view = OpeningView(
-            screen
+            #            screen
+            new_center_frame
         )
 
     def _show_intro_view(self, screen):
-        for widget in screen.winfo_children():
-            # removes widgets from e.g. frame without actually destroying the frame
-            widget.destroy()
+        #        for widget in screen.winfo_children():
+        #            # removes widgets from e.g. frame without actually destroying the frame
+        #            widget.destroy()
+        #        self._current_view = IntroView(
+        #            screen
+        #        )
+
+        new_center_frame = Frame(
+            screen,
+            bg="cyan",
+            width=self._root_width,
+            heigh=self._root_height - self._bottom_height,
+        )
+
+        new_center_frame.grid(
+            row=0,
+            column=0,
+            sticky="nsew"
+        )
+
         self._current_view = IntroView(
-            screen
+            #            screen
+            new_center_frame
         )
 
     def _show_options_view(self, screen):
-        for widget in screen.winfo_children():
-            widget.destroy()
+        #        for widget in screen.winfo_children():
+        #            widget.destroy()
+        #        self._current_view = OptionsView(
+        #            screen
+        #        )
+        #
+        new_center_frame = Frame(
+            screen,
+            bg="cyan",
+            width=self._root_width,
+            heigh=self._root_height - self._bottom_height,
+        )
+
+        new_center_frame.grid(
+            row=0,
+            column=0,
+            sticky="nsew"
+        )
+
         self._current_view = OptionsView(
-            screen
+            #            screen
+            new_center_frame
         )
 
     def _show_game_view(self, screen):
         # self._hide_current_view()
-        for widget in screen.winfo_children():
-            widget.destroy()
+        #        for widget in screen.winfo_children():
+        #            widget.destroy()
+        #        self._current_view = GameView(
+        #            screen
+        #        )
+
+        new_center_frame = Frame(
+            screen,
+            bg="cyan",
+            width=self._root_width,
+            heigh=self._root_height - self._bottom_height,
+        )
+
+        new_center_frame.grid(
+            row=0,
+            column=0,
+            sticky="nsew"
+        )
+
         self._current_view = GameView(
-            screen
+            #            screen
+            new_center_frame
         )
 
     def _hide_current_view(self):

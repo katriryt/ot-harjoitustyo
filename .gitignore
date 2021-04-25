@@ -18,7 +18,12 @@
 /src/ui/__pycache__/
 /src/services/__pycache__/
 /src/entities/__pycache__/
+/src/repositories/__pycache__/
+
 .coverage
+
+/data/playerdatabase.db
+
 
 /projekti/
 
