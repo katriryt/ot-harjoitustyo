@@ -20,12 +20,6 @@ Install dependencies with the following command:
 poetry install
 ```
 
-Make the necessary initialization operations with the following command: 
-
-```bash
-poetry run invoke build
-```
-
 Start the application with the following command: 
 
 ```bash
