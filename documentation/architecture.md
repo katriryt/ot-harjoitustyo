@@ -48,7 +48,7 @@ Regarding the main ways to use Player's individual data, [Player](../src/entitie
 - 'get_one_player_stats(self, given_name)'
 - 'update_player_stats(self, new_stats)'
 
-Class is the primary link with the [DbUlities](../src/repositories/dbutilities.py). 
+Class is the primary link with the [DbUtilities](../src/repositories/dbutilities.py). 
 
 The full game logic is descibed below (based on current level of implementation): 
 
@@ -62,7 +62,7 @@ Purpose of the classes in repositories is to store the data used by the applicat
 
 There are to be two classes for the storage of data: one for storing the player data and statistics, and other for storing the katakanas used by the game.
 
-At the moment, [DbUlities](../src/repositories/dbutilities.py), which sets up a database with player data, is established (work in progress). Player data is stored in an SQLite-database in a table called 'Players'. Player database is initialized at the start of the game by [index.py](../index.py). 
+At the moment, [DbUtilities](../src/repositories/dbutilities.py), which sets up a database with player data, is established (work in progress). Player data is stored in an SQLite-database in a table called 'Players'. Player database is initialized at the start of the game. 
 
 Database for katakanas is yet to be developed.
 
