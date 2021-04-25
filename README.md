@@ -28,7 +28,7 @@ poetry run invoke start
 
 ## Release
 
-Get the first [release](TO BE ADDED) of the game. 
+Get the first [release](https://github.com/katriryt/ot-harjoitustyo/releases/tag/viikko5) of the game. 
 
 ## Commands on the command line
 
