@@ -3,6 +3,7 @@
 import sqlite3
 import os
 
+
 class Player:
     def __init__(self):
         text = os.path.join(".", "data", "playerdatabase.db")

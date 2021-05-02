@@ -1,7 +1,3 @@
-#from tkinter import *
-#from PIL import Image, ImageTk
-#from functools import partial
-#import random
 from tkinter import Frame, Button
 from ui.openingview import OpeningView
 from ui.introview import IntroView
@@ -10,20 +6,26 @@ from ui.gameview import GameView
 
 
 class UI:
+    """Purpose of the class is to set the common UI specifications
+    and elements across all of the views.
+    """
+
     def __init__(self, root, input_width, input_height):
-        # Sets window as the main object and current view as None.
+        """Constructor for the class. Sets window given by the
+        index.py as the baseline view for the game.
+        """
         self._root = root
         self._root_width = input_width
-#        print(self._root_width)
         self._root_height = input_height
-#        print(self._root_height)
         self._bottom_height = 50
 
         self._current_view = None
 
     def start(self):
+        """Methods sets the common frames across all of the views, as well as
+        a common list of action buttons (e.g. start, exit) at the bottom of all the views.
+        """
         self._root.grid_rowconfigure(0, weight=1)
-        # remember to configure the same from the start
         self._root.grid_columnconfigure(0, weight=1)
 
         center_frame = Frame(
@@ -40,9 +42,6 @@ class UI:
             height=self._bottom_height,
         )
 
-#        self._root.grid_rowconfigure(2)
-#        self._root.grid_columnconfigure(1)
-
         center_frame.grid(
             row=0,
             column=0,
@@ -55,7 +54,6 @@ class UI:
             sticky="nsew"
         )
 
-        # bottom frame configure
         bottom_frame.grid_rowconfigure(1)
         bottom_frame.grid_columnconfigure(
             [0, 1, 2, 3, 4, 5, 6, 7], minsize=(self._root_width/8))
@@ -70,13 +68,11 @@ class UI:
             button = Button(
                 bottom_frame,
                 text=bottom_frame_headlines[j],
-                compound="center",  # CENTER
+                compound="center",
                 width=12,
                 height=1,
                 background="orange",
                 activebackground="red",
-                #                command = self._quit
-                #                command = lambda: self._show_game_view(center_frame),
                 command=commands[j]
             )
 
@@ -90,9 +86,11 @@ class UI:
         self._show_opening_view(center_frame)
 
     def _show_opening_view(self, screen):
-        #        for widget in screen.winfo_children():
-        #            widget.destroy()
+        """Method draws the opening view of the common frame.
 
+        Args:
+            screen (frame): Method is given a frame defined in the common UI.
+        """
         new_center_frame = Frame(
             screen,
             bg="cyan",
@@ -107,17 +105,15 @@ class UI:
         )
 
         self._current_view = OpeningView(
-            #            screen
             new_center_frame
         )
 
     def _show_intro_view(self, screen):
-        #        for widget in screen.winfo_children():
-        #            # removes widgets from e.g. frame without actually destroying the frame
-        #            widget.destroy()
-        #        self._current_view = IntroView(
-        #            screen
-        #        )
+        """Method draws the introduction view of the common frame.
+
+        Args:
+            screen (frame): Method is given a frame defined in the common UI.
+        """
 
         new_center_frame = Frame(
             screen,
@@ -133,17 +129,16 @@ class UI:
         )
 
         self._current_view = IntroView(
-            #            screen
             new_center_frame
         )
 
     def _show_options_view(self, screen):
-        #        for widget in screen.winfo_children():
-        #            widget.destroy()
-        #        self._current_view = OptionsView(
-        #            screen
-        #        )
-        #
+        """Method draws the options view of the common frame.
+
+        Args:
+            screen (frame): Method is given a frame defined in the common UI.
+        """
+
         new_center_frame = Frame(
             screen,
             bg="cyan",
@@ -158,17 +153,15 @@ class UI:
         )
 
         self._current_view = OptionsView(
-            #            screen
             new_center_frame
         )
 
     def _show_game_view(self, screen):
-        # self._hide_current_view()
-        #        for widget in screen.winfo_children():
-        #            widget.destroy()
-        #        self._current_view = GameView(
-        #            screen
-        #        )
+        """Method draws the games view of the common frame.
+
+        Args:
+            screen (frame): Method is given a frame defined in the common UI.
+        """
 
         new_center_frame = Frame(
             screen,
@@ -184,15 +177,17 @@ class UI:
         )
 
         self._current_view = GameView(
-            #            screen
             new_center_frame
         )
 
     def _hide_current_view(self):
-        # removes current view
+        """Method hides the currently active view.
+        """
         if self._current_view:
             self._current_view.destroy()
         self._current_view = None
 
     def _quit(self):
+        """Method exits the game.
+        """
         self._root.destroy()

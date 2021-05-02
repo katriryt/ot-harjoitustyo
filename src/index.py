@@ -1,12 +1,18 @@
 from tkinter import Tk
 from ui.ui import UI
-from repositories.dbutilities import DbUtilities
+from repositories.playerdbutilities import PlayerDatabaseUtilities
+from repositories.katakanadbutilities import KatakanaDatabaseUtilities
 
-# Basic setting for the window: title, size and ability to change (not allowed)
 
 class Main:
-    c = DbUtilities()
-    c.create_player_database()
+    """Purpose of the class is to initialize key databases and start the game.
+    It also initializes the basic settings for the game window (change is not allowed).
+    """
+    new_player_database = PlayerDatabaseUtilities()
+    new_player_database.initialize_player_db()
+
+    katakana_database = KatakanaDatabaseUtilities()
+    katakana_database.initialize_katakana_db()
 
     window = Tk()
 

@@ -1,21 +1,31 @@
-#from tkinter import *
 from tkinter import Label
 import os
 from PIL import Image, ImageTk
 
 
 class OpeningView():
+    """Purpose of the class is to draw the opening view for the game.
+    """
+
     def __init__(self, root):
-        self._root = root                               # given root value: center_frame
+        """Constructor for the class.
+
+        Args:
+            root (frame): Sets the frame where everything in the view
+            is presented.
+        """
+        self._root = root
         self._initialize()
 
-    def destroy(self):                                  # removes the view
+    def destroy(self):
+        """Method destroys the root of the view.
+        """
         self._root.destroy()
 
     def _initialize(self):
-
+        """Method initializes all the visual elements in the view.
+        """
         self._root.grid_rowconfigure([0, 1, 2, 3], minsize=100)
-        # note: need to define for each frame how want to divide to grid
         self._root.grid_columnconfigure([0, 1, 2, 3], minsize=200)
 
         headline_label = Label(
@@ -23,18 +33,9 @@ class OpeningView():
             text="Katakana no geemu - welcome",
         )
 
-
-#        image1 = Image.open(
-#            ".\data\explosion2.png") # alkuperäinen, ei toimi
-
         text = os.path.join(".", "data", "explosion2.png")
-#        print(text)
-        image1 = Image.open(text)  # ehdotettu korjaus ei toimi
+        image1 = Image.open(text)
 
-        # MUISTA KORJATA TÄMÄ!
-#        image1 = Image.open("C:\MyFolder\School\TKT20002 Ohjelmistotekniikka\Vko5\ot-harjoitustyo-copy\data\explosion2.png")
-        # works:
-#        image1 = Image.open("../data/explosion2.png")
         image1 = image1.resize((400, 200), Image.ANTIALIAS)
         test = ImageTk.PhotoImage(image1)
         label1 = Label(

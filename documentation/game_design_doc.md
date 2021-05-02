@@ -27,30 +27,30 @@ Implementation status for the functionalities in paranthesis. Alternatives for t
 ### High level functionalities by screen (implementation status in paranthesis)
 * Screen 1 shows the name of the game and allows to go to introduction/options screen, start the game with default functionalities or exit. (first draft DONE, visual improvements in BACKLOG)
 * Screen 2 outlines the purpose of the game and the instructions for playing. (first draft DONE, visual improvements in BACKLOG)
-* In screen 3, the player can input their name, select their team and choose the level of the game (to begin with, only Level 0 (training mode) or Level 1 (easiest level)). (baseline DONE, player can input their name (also supporting database functionalities) DONE, other functionalities in BACKLOG)
-* In screen 4, a game board is set. The living members of the team are shows as well as the statistics for the game. (baseline and core functionalities DONE, other functionalities in BACKLOG)
+* In screen 3, the player can input their name, select their team and choose the level of the game (to begin with, only Level 0 (training mode) or Level 1 (easiest level)). (DONE week 6, team selection to be changed to show only lives, restriction on levels available to be finalized)
+* In screen 4, a game board is set. The living members of the team are shows as well as the statistics for the game. (DONE week 6, visual improvements in backlog)
 * If the level is cleared (all identical pairs of katakana cards are identified within time limit, "Sudden death" cards may be left of the table unopened), game moves to screen 5, allowing e.g. advancement to new levels or replaying of the same level. (BACKLOG)
 * If level is not cleared (cards are not identified within the time limit or the entire team is eliminated in the attempt), game moves to screen 6, allowing starting from level 0 and 1. (BACKLOG)
 
-* The main screen will have a few different implementations depending on the level of the game. Variation could be done on e.g. number of cards, number of "Sudden death" cards, and time available for clearing the level. (BACKLOG)
+* The main screen will have a few different implementations depending on the level of the game. Variation could be done on e.g. number of cards, number of "Sudden death" cards, and time available for clearing the level. (DONE week 6, time available pending)
 
 ### Functionalities as a list
 User can...
 * Read the instructions for the game (first draft DONE)
 * Choose their team members (BACKLOG)
-* Choose the difficulty level of the game (0 or 1 to begin with) (BACKLOG)
+* Choose the difficulty level of the game (0 or 1 to begin with) (DONE, week 6)
 * Set a name for themselves (DONE)
 * Turn around two cards at the same time by selecting the card with a press of a mouse (DONE)
 
 The game will...
-* Assign a default name for the player (if not inserted by the player) (BACKLOG)
-* Select a default team and difficulty level (if not chosen by be player) (BACKLOG)
+* Assign a default name for the player (if not inserted by the player) (DONE, week 6)
+* Select a default team and difficulty level (if not chosen by be player) (difficulty level DONE, week 6; assigning team BACKLOG)
 * Allow moving between screen with dedicated buttons (same menu structure on every page (buttons for Intro, Options, Start and Exit)) (4/6 views DONE, 2/6 BACKLOG)
 * Show the level that is being played (BACKLOG)
 * Count down available time to clear the level (BACKLOG)
 * Show the team members still alive (counter DONE, rest in BACKLOG)
 * Remove cards from the table when a correct pair is identified (DONE)
-* Count and show points collected (player get points from identifying the correct pairs of cards) (counter DONE, visuals and restoration BACKLOG)
+* Count and show points collected (player get points from identifying the correct pairs of cards) (counter DONE, visuals, restoration and updating counter BACKLOG)
 * Show the number of cards that will eliminate participants per level (BACKLOG)
 * Eliminate a team member if a card with "Sudden Death" item is opened (counter DONE, rest of the functionalities in BACKLOG)
 
@@ -58,7 +58,7 @@ The game will...
 * Improve visuals/graphics of the game (background pictures, special effects in cases of success and "Sudden death") (BACKLOG)
 * Allow characteristics for the team members (e.g. no elimination even in the case of "Sudden death" cards) (BACKLOG)
 * Player chooses who is the one "guessing" the card and in case of "Sudden death" who from the team is eliminated (BACKLOG)
-* Number of levels to be cleared (2 upwards), variation in the levels (number of cards to be turned, hints given in cards (e.g. katakana in one card and roomaji in another without showing both in the same card), increasing number of "Sudden death" cards, introducing "New Team member" cards) (BACKLOG)
+* Number of levels to be cleared (2 upwards), variation in the levels (number of cards to be turned, hints given in cards (e.g. katakana in one card and roomaji in another without showing both in the same card), increasing number of "Sudden death" cards, introducing "New Team member" cards) (variation on levels DONE week 6, rest in BACKLOG)
 
 ## Limitations to be Considered
 

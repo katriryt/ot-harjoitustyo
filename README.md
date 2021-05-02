@@ -11,6 +11,7 @@ The game is a modified version of a basic memory game (find the pairs game). The
 - [PreliminaryGameDesignDocument](/documentation/game_design_doc.md)
 - [PreliminaryArchitureDescription](/documentation/architecture.md)
 - [TimeSheet](/documentation/tyoaikakirjanpito.pdf)
+- [PreliminaryInstruction](/documentation/preliminary_instructions.md)
 
 ## Installation
 
@@ -28,7 +29,7 @@ poetry run invoke start
 
 ## Release
 
-Get the first [release](https://github.com/katriryt/ot-harjoitustyo/releases/tag/viikko5) of the game. 
+Get the latest [release](https://github.com/katriryt/ot-harjoitustyo/releases/tag/viikko6) of the game. 
 
 ## Commands on the command line
 
@@ -75,4 +76,4 @@ poetry run invoke format
 ```
 
 
-Updated 25.4.2021
+Updated 2.5.2021

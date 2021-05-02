@@ -5,11 +5,12 @@ from tkinter import Label  # Tk, Label
 from tkinter import ttk  # tarpeen Comboboxissa
 from entities.player import Player
 
+
 class GameOptions:
     #    def __init__(self, root, input_width, input_height):
     def __init__(self, relevant_root):
-#        print("game options aloitettu")
-#        print(root)
+        #        print("game options aloitettu")
+        #        print(root)
         # Sets window as the main object and current view as None.
         self._root = relevant_root
         self._current_view = None
@@ -20,7 +21,7 @@ class GameOptions:
         self.start()
 
     def start(self):
-#        print("startissa")
+        #        print("startissa")
         self._root.grid_rowconfigure(10, minsize=1, weight=1)
         self._root.grid_columnconfigure(10, minsize=1, weight=1)
 #        print("ckonfiguroinnissa")

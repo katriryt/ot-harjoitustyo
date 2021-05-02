@@ -1,18 +1,29 @@
-#from tkinter import *
-#from PIL import Image, ImageTk
 from tkinter import Label
 
 
 class IntroView():
+    """Purpose of this view is to give information about the game
+    for the player.
+    """
+
     def __init__(self, root):
+        """Constructor for the class.
+
+        Args:
+            root (frame): Sets the frame where everything in the view
+            is presented.
+        """
         self._root = root
         self._initialize()
 
     def destroy(self):
+        """Method destroys the root of the view.
+        """
         self._root.destroy()
 
     def _initialize(self):
-
+        """Method initializes all the visual elements in the view.
+        """
         self._root.configure(bg="cyan")
 
         all_text = ["Welcome to the Katakana no geemu!",
