@@ -38,7 +38,7 @@ In the [OptionsView](../src/ui/optionsview.py), the player sets the basic variab
 - '_select_game_level(self, selected_game_level_button)'
 - '_update_current_game_optios(self)'
 
-In the [PlayGameInteractions](../src/ui/playgameinteractionsview.py), the player interacts with the game, flipping cards and collecting points. Class offers, e.g., the following core functionalities: 
+In the [PlayGameInteractions](../src/ui/playgameinteractions.py), the player interacts with the game, flipping cards and collecting points. Class offers, e.g., the following core functionalities: 
 - '_draw_game_view(self)'
 - '_set_up_game_board(self)'
 - '_card_pressed(self, input_button_number)'
@@ -57,9 +57,9 @@ First purpose of the classes in repositories is to create and store the data use
 
 ### Creating databases and storing data
 
-There are two classes for the storage of data. [KatakanaDatabaseUtilities](../src/repositories/katakanadatabaseutilities.py) creates access to the Katakana database (SQLite database) and populates the database with katakanas used in the game. Database also stores specifications for the different levels of the game (e.g. number of cards and types of katakanas to be learnt). 
+There are two classes for the storage of data. [KatakanaDatabaseUtilities](../src/repositories/katakanadbutilities.py) creates access to the Katakana database (SQLite database) and populates the database with katakanas used in the game. Database also stores specifications for the different levels of the game (e.g. number of cards and types of katakanas to be learnt). 
 
-[PlayerDatabaseUtilities](../src/repositories/playerdatabaseutilities.py) sets up and creates access to the Player database (SQLite database). Player database includes all the players in the game and their data (e.g. points collected, game levels reached). Player database also stores specifications for the game that is currently played (e.g. name of the player, level being played). 
+[PlayerDatabaseUtilities](../src/repositories/playerdbutilities.py) sets up and creates access to the Player database (SQLite database). Player database includes all the players in the game and their data (e.g. points collected, game levels reached). Player database also stores specifications for the game that is currently played (e.g. name of the player, level being played). 
 
 Both of these databases are initialized at the start of the game. 
 Configuration file has not yet been developed.
