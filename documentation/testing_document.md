@@ -11,7 +11,7 @@ Program has been tested both manually and automatically with unit and integratio
 ### Repository Classes
 
 Repository classes `KatakanaDatabaseUtilities`, `KatakanaDatabaseInteraction`, `PlayerDatabaseUtilities`, and `PlayerDatabaseInteraction` are tested with [TestKatakanaDatabaseUtilities](../src/tests/katakanadbutilities_test.py), [TestKatakanaDatabaseInteraction](../src/tests/katakanadatabaseinteraction_test.py), 
-[TestPlayerDatabaseUtilities](../src/tests/playerdatabasebutilities_test.py), and 
+[TestPlayerDatabaseUtilities](../src/tests/playerdatabaseutilities_test.py), and 
 [TestPlayerDatabaseInteraction](../src/tests/playerdatabaseinteraction_test.py), respectively.
 
 As above, tests are carried out in the real databases, and their impacts are cleaned from the database after every test.
