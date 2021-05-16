@@ -90,20 +90,23 @@ One of the key functionalities in the game is the creation of a new player.
 
 When the user has opened the game and entered the Options view by pressing _Options_ button in the UI, the user is presented with a drop-down menu of previously used player names from which to select. The user can also type in a new name and press _Enter_ after which a new player is created and the statistics for this new user are printed on the screen.
 
-The following sequence diagrams shows how the information flows during this process. For the sake of simplicity, only the case, where the name is acceptable and a new player can be created, is presented.
+The following sequence diagram shows how the information flows during this process. For the sake of simplicity, only the case, where the name is acceptable and a new player can be created, is presented.
 
 ![SequenceDiagramNewPlayer](./pictures/sequence_diag_new_player_3.png)
-TO BE UPDATED
 
-### Other Functionalities
+### Playing the game and the end of the game
 
-TO BE ADDED 
+Another one of the key functionalities in the game is playing the game as well as the end of the game. The following sequence diagram shows operations and the information flow in the final round of the game, when the user succesfully finds all the pairs in a given level, leaving only "Sudden Death" cards on the table. 
+
+![SequenceDiagramEndofGamePart1](./pictures/sequence_diagram_win_1.png)
+
+![SequenceDiagramEndofGamePart2](./pictures/sequence_diagram_win_2.png)
 
 ## Development Areas in the Application Structure
 
 ### User Interface
 
-It is important to note that the UI interacts directly with the repositories in the Options view. One might argue whether some of these activities should be in a separate class. The number of interactions is, however, limited (e.g. getting names available from the database via `PlayerDatabaseInteraction` class), and hence were considered not to merit their own class.
+It is important to note that the UI interacts directly with the repositories in the `OptionsView`. One might argue whether some of these activities should be in a separate class. The number of interactions is, however, limited (e.g. getting names available from the database via `PlayerDatabaseInteraction` class), and hence were considered not to merit their own class.
 
 A few issues highlighted by pylint has been left in the code, such as certain unnecessary if - else combinations and a few instances of repeat code (both left for the sake of clarity), and high number of instance variables (considered relevant for the specific classes).
 

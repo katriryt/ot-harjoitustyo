@@ -61,4 +61,5 @@ The game will...
 ## Limitations to be Considered
 
 * Application needs to run on Windows and Linux desktop computers
+* Japanese characters may need to be installed before running the application. Instructions for Ubuntu outlined in [Instructions](./preliminary_instructions.md)
 * Data is stored on the user's computer

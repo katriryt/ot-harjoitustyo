@@ -10,11 +10,18 @@ Install dependencies with the following command:
 poetry install
 ```
 
+Note: if you are running the program on Ubuntu, you may need to install Japanese fonts with the following command: 
+
+```bash
+sudo apt install fonts-takao-mincho
+```
+
 Start the application with the following command: 
 
 ```bash
 poetry run invoke start
 ```
+
 
 ## What next?
 
