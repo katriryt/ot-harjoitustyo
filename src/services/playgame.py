@@ -23,7 +23,7 @@ class PlayGame:
 
         current_game_details = self.katakana_database._get_game_specs(
             self.current_game_level)
-        self.pairs_to_find = current_game_details[3] 
+        self.pairs_to_find = current_game_details[3]
 
         self.pairs_found = 0
         self.sudden_deaths = current_game_details[2]
