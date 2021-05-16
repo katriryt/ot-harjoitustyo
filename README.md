@@ -4,14 +4,15 @@ Purpose of the **Katakana no Geemu - Sudden Death** is to learn to read Japanese
 
 Katakana is one of the three Japanese syllabary, along with hiragana and kanji (and in some cases the Latin script (known as roomaji)). 
 
-The game is a modified version of a basic memory game (find the pairs game). The player needs to pick two cards with the same symbol from a set of turned over cards. There are a few "Sudden death" cards included in the set of cards, which cause the player to lose lives. There is also a timer, so the puzzle needs to be solved within a time limit. As levels become more difficult, time is reduced, number of cards and "Sudden death" cards is increased.
+The game is a modified version of a basic memory game (find the pairs game). The player needs to pick two cards with the same symbol from a set of turned over cards. There may be a few "Sudden death" cards included in the set of cards, which cause the player to lose team members (lives). As levels become more difficult, katakana characters become more difficult, and the number of cards and "Sudden death" cards is increased.
 
 ## Documentation
 
-- [PreliminaryGameDesignDocument](/documentation/game_design_doc.md)
-- [PreliminaryArchitureDescription](/documentation/architecture.md)
+- [Instructions](/documentation/preliminary_instructions.md)
+- [GameDesignDocument](/documentation/game_design_doc.md)
+- [ArchitureDescription](/documentation/architecture.md)
+- [TestingDocument](/documentation/testing_document.md)
 - [TimeSheet](/documentation/tyoaikakirjanpito.pdf)
-- [PreliminaryInstruction](/documentation/preliminary_instructions.md)
 
 ## Installation
 
@@ -29,7 +30,7 @@ poetry run invoke start
 
 ## Release
 
-Get the latest [release](https://github.com/katriryt/ot-harjoitustyo/releases/tag/viikko6) of the game. 
+Get the latest [release](https://github.com/katriryt/ot-harjoitustyo/releases/tag/viikko7) of the game. 
 
 ## Commands on the command line
 
@@ -76,4 +77,4 @@ poetry run invoke format
 ```
 
 
-Updated 2.5.2021
+Updated 16.5.2021

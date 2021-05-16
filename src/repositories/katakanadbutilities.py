@@ -13,29 +13,30 @@ class KatakanaDatabaseUtilities():
         """
         text = os.path.join(".", "data", "katakanadatabase.db")
         self._file_name = text
+        self.katakana_db = ""
 
     def initialize_katakana_db(self):
         """Method calls other methods in class to create the necessary
         databases, tables and data at the beginning of the game
         for the Katakana database.
         """
-        self._create_katakana_database_connection()
+        self.create_katakana_database_connection()
         self._create_katakana_database_table()
         self._create_games_database_table()
 
-    def _create_katakana_database_connection(self):
+    def create_katakana_database_connection(self):
         """Method sets up connection with the Katakana database.
         """
-        self._katakana_db = sqlite3.connect(self._file_name)
-        self._katakana_db.isolation_level = None
+        self.katakana_db = sqlite3.connect(self._file_name)
+        self.katakana_db.isolation_level = None
 
     def _create_katakana_database_table(self):
-        """Method creates a empty table Katakanas for katakanas in the Katakana
+        """Method creates an empty table Katakanas for katakanas in the Katakana
         database, if the table does not yet exist.
         """
-        self._create_katakana_database_connection()
+        self.create_katakana_database_connection()
 
-        raw_existing_databases = self._katakana_db.execute("""SELECT name
+        raw_existing_databases = self.katakana_db.execute("""SELECT name
                                             FROM sqlite_master
                                             WHERE type = "table" """).fetchall()
 
@@ -45,13 +46,13 @@ class KatakanaDatabaseUtilities():
             existing_databases.append(i[0])
 
         if (len(existing_databases) == 0) or ("Katakanas" not in existing_databases):
-            self._katakana_db.execute("""CREATE TABLE Katakanas(
+            self.katakana_db.execute("""CREATE TABLE Katakanas(
                 id INTEGER PRIMARY KEY,
                 roomaji TEXT,
                 katakana TEXT,
                 series TEXT,
                 difficulty_level INTEGER)"""
-                                      )
+                                     )
 
             self._create_katakana_baseline_data()
 
@@ -70,7 +71,7 @@ class KatakanaDatabaseUtilities():
             line = line.strip()
             line = line.split(',')
 
-            self._katakana_db.execute("""INSERT INTO Katakanas
+            self.katakana_db.execute("""INSERT INTO Katakanas
                                             (roomaji,
                                             katakana,
                                             series,
@@ -82,9 +83,9 @@ class KatakanaDatabaseUtilities():
         """At the beginning of the game, a table Games is created, if it does not exist.
         This operation is done only once at the beginning of the game.
         """
-        self._create_katakana_database_connection()
+        self.create_katakana_database_connection()
 
-        raw_existing_databases = self._katakana_db.execute("""SELECT *
+        raw_existing_databases = self.katakana_db.execute("""SELECT *
                                             FROM sqlite_master
                                             WHERE type = "table" """).fetchall()
 
@@ -93,31 +94,32 @@ class KatakanaDatabaseUtilities():
             existing_databases.append(i[1])
 
         if (len(existing_databases) == 0) or ("Games" not in existing_databases):
-            self._katakana_db.execute("""CREATE TABLE Games(
+            self.katakana_db.execute("""CREATE TABLE Games(
                 game_level INTEGER PRIMARY KEY,
                 number_of_cards INTEGER,
                 number_of_deaths INTEGER,
                 number_of_unique_cards INTEGER)"""
-                                      )
+                                     )
 
             self._create_games_baseline_data()
 
     def _create_games_baseline_data(self):
         """Method fills in the Games table in the Katakana database at the beginning of the game.
-        Source for the data is a separate csv file.
+        Source for the data is a separate csv file. Contents of the table contain specifications
+        for the different levels of the game.
         """
         text = os.path.join(".", "data", "games.csv")
         with open(text) as games_baseline_file:
             raw_games_data = games_baseline_file.readlines()
 
-        self._create_katakana_database_connection()
+        self.create_katakana_database_connection()
 
         for i in range(1, len(raw_games_data)):
             line = raw_games_data[i]
             line = line.strip()
             line = line.split(',')
 
-            self._katakana_db.execute("""INSERT
+            self.katakana_db.execute("""INSERT
                                             INTO Games
                                             (game_level,
                                             number_of_cards,

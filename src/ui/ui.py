@@ -3,6 +3,7 @@ from ui.openingview import OpeningView
 from ui.introview import IntroView
 from ui.optionsview import OptionsView
 from ui.gameview import GameView
+from ui.fonts import Fonts
 
 
 class UI:
@@ -15,6 +16,7 @@ class UI:
         index.py as the baseline view for the game.
         """
         self._root = root
+        self.fonts = Fonts()
         self._root_width = input_width
         self._root_height = input_height
         self._bottom_height = 50
@@ -30,7 +32,6 @@ class UI:
 
         center_frame = Frame(
             self._root,
-            bg="cyan",
             width=self._root_width,
             heigh=self._root_height - self._bottom_height,
         )
@@ -71,8 +72,9 @@ class UI:
                 compound="center",
                 width=12,
                 height=1,
-                background="orange",
+                background="red",
                 activebackground="red",
+                font=self.fonts.small_text_font,
                 command=commands[j]
             )
 
@@ -86,14 +88,13 @@ class UI:
         self._show_opening_view(center_frame)
 
     def _show_opening_view(self, screen):
-        """Method draws the opening view of the common frame.
+        """Method draws the opening view on the common frame.
 
         Args:
             screen (frame): Method is given a frame defined in the common UI.
         """
         new_center_frame = Frame(
             screen,
-            bg="cyan",
             width=self._root_width,
             heigh=self._root_height - self._bottom_height,
         )
@@ -109,7 +110,7 @@ class UI:
         )
 
     def _show_intro_view(self, screen):
-        """Method draws the introduction view of the common frame.
+        """Method draws the introduction view on the common frame.
 
         Args:
             screen (frame): Method is given a frame defined in the common UI.
@@ -117,7 +118,6 @@ class UI:
 
         new_center_frame = Frame(
             screen,
-            bg="cyan",
             width=self._root_width,
             heigh=self._root_height - self._bottom_height,
         )
@@ -133,7 +133,7 @@ class UI:
         )
 
     def _show_options_view(self, screen):
-        """Method draws the options view of the common frame.
+        """Method draws the options view on the common frame.
 
         Args:
             screen (frame): Method is given a frame defined in the common UI.
@@ -141,7 +141,6 @@ class UI:
 
         new_center_frame = Frame(
             screen,
-            bg="cyan",
             width=self._root_width,
             heigh=self._root_height - self._bottom_height,
         )
@@ -157,7 +156,7 @@ class UI:
         )
 
     def _show_game_view(self, screen):
-        """Method draws the games view of the common frame.
+        """Method draws the games view on the common frame.
 
         Args:
             screen (frame): Method is given a frame defined in the common UI.
@@ -165,7 +164,6 @@ class UI:
 
         new_center_frame = Frame(
             screen,
-            bg="cyan",
             width=self._root_width,
             heigh=self._root_height - self._bottom_height,
         )

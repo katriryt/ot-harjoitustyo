@@ -1,6 +1,7 @@
 from tkinter import Label
 import os
 from PIL import Image, ImageTk
+from ui.fonts import Fonts
 
 
 class OpeningView():
@@ -15,6 +16,7 @@ class OpeningView():
             is presented.
         """
         self._root = root
+        self.fonts = Fonts()
         self._initialize()
 
     def destroy(self):
@@ -23,17 +25,38 @@ class OpeningView():
         self._root.destroy()
 
     def _initialize(self):
-        """Method initializes all the visual elements in the view.
+        """Method calls other methods to create and draw
+        all the visual elements in the view.
         """
-        self._root.grid_rowconfigure([0, 1, 2, 3], minsize=100)
-        self._root.grid_columnconfigure([0, 1, 2, 3], minsize=200)
+        self.create_big_katakana_headline()
+        self.create_small_headline_label()
+        self.create_picture()
 
+    def create_big_katakana_headline(self):
+        """Method creates and draws the game headline in katakanas.
+        """
+        name_of_game = "\u30AB\u30BF\u30AB\u30CA\u306E\u30B2\u30FC\u30E0"
         headline_label = Label(
             self._root,
-            text="Katakana no geemu - welcome",
-        )
+            text=name_of_game,
+            font=self.fonts.big_katakana_headline_font)
 
-        text = os.path.join(".", "data", "explosion2.png")
+        headline_label.place(x=100, y=250)
+
+    def create_small_headline_label(self):
+        """Method creates and draws the headline of the game in roomaji.
+        """
+        headline_label = Label(
+            self._root,
+            text="katakana no geemu",
+            font=self.fonts.big_text_font)
+
+        headline_label.place(x=360, y=320)
+
+    def create_picture(self):
+        """Method creates and draws a picture of the game.
+        """
+        text = os.path.join(".", "data", "suddendeath.png")
         image1 = Image.open(text)
 
         image1 = image1.resize((400, 200), Image.ANTIALIAS)
@@ -41,15 +64,8 @@ class OpeningView():
         label1 = Label(
             self._root,
             image=test,
-            bg="cyan"
         )
 
         label1.image = test
 
-        headline_label.grid(
-            row=2,
-            column=2,
-            columnspan=1
-        )
-
-        label1.place(x=400, y=0)
+        label1.place(x=550, y=70)

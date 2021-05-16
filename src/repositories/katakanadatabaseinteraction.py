@@ -6,7 +6,7 @@ class KatakanaDatabaseInteraction():
     """Purpose of this class is to handle all the interactions with the Katakana database.
     Methods in this class include e.g. getting list of katakanas for the game as well as
     specifications for the game difficulty level selected.
-    Class acts as a link between the database and the UI, services, and entities.
+    Class acts as a link between the database and the other classes.
     """
 
     def __init__(self):
@@ -19,22 +19,22 @@ class KatakanaDatabaseInteraction():
         number of cards, number of death cards, and number of unique cards series).
         """
 
-        self._katakana_database._create_katakana_database_connection()
+        self._katakana_database.create_katakana_database_connection()
 
         given_level = int(level)
 
-        raw_game_specs = self._katakana_database._katakana_db.execute(
+        raw_game_specs = self._katakana_database.katakana_db.execute(
             """SELECT * FROM Games WHERE game_level = ?""", [given_level]).fetchone()
 
         return raw_game_specs
 
-    def _get_all_game_levels(self):
-        """Methods returns a list of games for all the game levels.
+    def get_all_game_levels(self):
+        """Method returns a list of games for all the game levels.
         """
 
-        self._katakana_database._create_katakana_database_connection()
+        self._katakana_database.create_katakana_database_connection()
 
-        raw_game_levels = self._katakana_database._katakana_db.execute(
+        raw_game_levels = self._katakana_database.katakana_db.execute(
             """SELECT game_level FROM Games""").fetchall()
 
         all_game_levels = []
@@ -44,13 +44,13 @@ class KatakanaDatabaseInteraction():
 
     def _get_katakana_list(self, level):
         """ Method gets from the database and returns to the customer
-        a list of the katakanas for the given level.
+        a list of the katakanas for the given game difficulty level.
         """
-        self._katakana_database._create_katakana_database_connection()
+        self._katakana_database.create_katakana_database_connection()
 
         given_level = int(level)
 
-        katakanas_in_level = self._katakana_database._katakana_db.execute(
+        katakanas_in_level = self._katakana_database.katakana_db.execute(
             """SELECT
                         roomaji,
                         katakana,
@@ -60,8 +60,8 @@ class KatakanaDatabaseInteraction():
 
         return katakanas_in_level
 
-    def _get_cards_for_game_board(self, level: int):
-        """Method generates a shuffled deck of katakana-cards to be printed
+    def get_cards_for_game_board(self, level: int):
+        """Method generates a shuffled deck of katakana cards to be printed
         to the game board.
 
         Args:
@@ -69,9 +69,9 @@ class KatakanaDatabaseInteraction():
 
         Returns:
             list: Method returns a list of the right katakana cards and,
-            if releant for the level, also the right number of sudden death cards.
+            if relevant for the level, also the right number of sudden death cards.
         """
-        self._katakana_database._create_katakana_database_connection()
+        self._katakana_database.create_katakana_database_connection()
 
         given_level = int(level)
         game_specs = self._get_game_specs(given_level)
@@ -88,7 +88,7 @@ class KatakanaDatabaseInteraction():
         sudden_deaths_in_game = game_specs[2]
 
         for i in range(sudden_deaths_in_game):
-            game_board.append(("", "Sudden Death"))
+            game_board.append(("", "Death"))
 
         random.shuffle(game_board)
 
@@ -106,7 +106,7 @@ class KatakanaDatabaseInteraction():
             List: Given raw_game_board is appended with additional katakanas (if needed)
             or reduced (if there were too many katakanas in the start).
         """
-        self._katakana_database._create_katakana_database_connection()
+        self._katakana_database.create_katakana_database_connection()
 
         if len(raw_game_board) == game_specs[3]:
             pass
@@ -129,13 +129,13 @@ class KatakanaDatabaseInteraction():
         return raw_game_board
 
     def _get_all_katakanas(self):
-        """ Method generates and returns a list of all of the katakana characters as a list.
-        List consists of tuples with the roomaji and katakana characters and their
+        """ Method generates and returns a list of all katakana characters as a list.
+        List consists of tuples with the roomaji and katakana characters, and their
         difficulty levels.
         """
-        self._katakana_database._create_katakana_database_connection()
+        self._katakana_database.create_katakana_database_connection()
 
-        all_katakanas = self._katakana_database._katakana_db.execute(
+        all_katakanas = self._katakana_database.katakana_db.execute(
             """SELECT
                     roomaji,
                     katakana,
